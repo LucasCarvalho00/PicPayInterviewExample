@@ -122,7 +122,7 @@ extension ListContactsView: UITableViewDataSource {
 
 extension ListContactsView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let contato = contacts[indexPath.row - 1]
+        let contato = contacts[indexPath.row]
         
         guard contato.isLegacy else {
             let alert = UIAlertController(title: "Você tocou em", message: "\(contato.name)", preferredStyle: .alert)
